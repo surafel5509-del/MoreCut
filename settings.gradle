@@ -11,6 +11,7 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
@@ -19,5 +20,17 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LibreCuts"
-include ':app'
+rootProject.name = "MoreCut"
+
+include(":app")
+
+// Foundation modules for the offline-first editor architecture.
+include(":core:common")
+include(":core:model")
+include(":core:domain")
+include(":core:ui")
+include(":core:database")
+include(":core:storage")
+include(":core:network")
+include(":core:media")
+include(":core:testing")
